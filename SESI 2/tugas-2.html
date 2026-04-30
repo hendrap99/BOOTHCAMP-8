@@ -1,84 +1,422 @@
-<body style="font-family: Arial, sans-serif;">
-    <table width="100%" border="0" cellpadding="10">
-        <tr>
-            <td><b>Hendra Profile</b></td>
-            <td align="right">Header &nbsp; Biodata &nbsp; Portofolio</td>
-        </tr>
-    </table>
-    <hr>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hendra Profile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <table width="100%" border="0" cellpadding="20">
-        <tr>
-            <td width="50%">
-                <h1>Selamat Datang di Website Saya</h1>
-                <p>Halo, saya Hendra. Saya adalah lulusan Sistem Informasi yang berdedikasi.</p>
-                <button>Pelajari Lebih Lanjut</button>
-            </td>
-            <td width="50%" align="center">
-                <img src="sesi-1/premium_photo-1689568126014-06fea9d5d341.avif" width="100%" alt="Hendra Profile Photo">
-            </td>
-        </tr>
-    </table>
-    <hr>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+            color: #333;
+        }
 
-    <div align="center"><h2>Tentang Saya</h2><p>Informasi Singkat Mengenai Saya</p></div>
-    <table width="100%" border="1" cellspacing="0" cellpadding="10" style="border-collapse: collapse; text-align: center;">
-        <tr>
-            <td width="33%"><b>Nama Lengkap</b><br>Hendra</td>
-            <td width="33%"><b>Pendidikan</b><br>S1 Sistem Informasi</td>
-            <td width="33%"><b>Pekerjaan</b><br>Staff</td>
-        </tr>
-        <tr>
-            <td><b>Kontak</b><br>082233345678</td>
-            <td><b>Hobi</b><br>Musik dan Olahraga</td>
-            <td><b>Alamat</b><br>Duren Sawit, Jakarta Timur</td>
-        </tr>
-    </table>
-    <hr>
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            flex-wrap: wrap;
+            gap: 20px;
+        }
 
-    <div align="center"><h2>Portofolio</h2><p>Kumpulan Proyek dan Karya Saya</p></div>
-    <table width="100%" border="0" cellspacing="0" cellpadding="15" style="border-collapse: collapse;">
-        <tr>
-            <td width="33%" style="border: 1px solid #ccc; padding: 15px; text-align: center;">
-                <b>Gambar</b><br>
-                <img src="sesi-1/foto profil.jfif" width="100%" alt="Portfolio 1" style="margin-top: 10px;">
-            </td>
-            <td width="33%" style="border: 1px solid #ccc; padding: 15px; text-align: center;">
-                <b>Teks</b><br>
-                <p>Nama Proyek: Website Profil</p>
-            </td>
-            <td width="33%" style="border: 1px solid #ccc; padding: 15px; text-align: left;">
-                <b>Penjelasan</b><br>
-                <p>Proyek pembuatan website profil pribadi menggunakan HTML dan CSS. Website ini menampilkan informasi biodata, pengalaman kerja, dan portfolio karya.</p>
-            </td>
-        </tr>
-        <tr>
-            <td width="33%" style="border: 1px solid #ccc; padding: 15px; text-align: center;">
-                <b>Gambar</b><br>
-                <img src="sesi-1/premium_photo-1689568126014-06fea9d5d341.avif" width="100%" alt="Portfolio 2" style="margin-top: 10px;">
-            </td>
-            <td width="33%" style="border: 1px solid #ccc; padding: 15px; text-align: center;">
-                <b>Teks</b><br>
-                <p>Nama Proyek: Sistem Informasi</p>
-            </td>
-            <td width="33%" style="border: 1px solid #ccc; padding: 15px; text-align: left;">
-                <b>Penjelasan</b><br>
-                <p>Proyek pengembangan sistem informasi untuk manajemen data perusahaan dengan database dan interface yang user-friendly.</p>
-            </td>
-        </tr>
-        <tr>
-            <td width="33%" style="border: 1px solid #ccc; padding: 15px; text-align: center;">
-                <b>Gambar</b><br>
-                <img src="sesi-1/premium_photo-1689568126014-06fea9d5d341.avif" width="100%" alt="Portfolio 3" style="margin-top: 10px;">
-            </td>
-            <td width="33%" style="border: 1px solid #ccc; padding: 15px; text-align: center;">
-                <b>Teks</b><br>
-                <p>Nama Proyek: Mobile App</p>
-            </td>
-            <td width="33%" style="border: 1px solid #ccc; padding: 15px; text-align: left;">
-                <b>Penjelasan</b><br>
-                <p>Proyek pengembangan aplikasi mobile dengan teknologi terkini untuk meningkatkan produktivitas dan kemudahan akses informasi.</p>
-            </td>
-        </tr>
-    </table>
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header nav {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .header nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .header nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            opacity: 0.95;
+        }
+
+        .hero-button {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .hero-button:hover {
+            background-color: #ff5252;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255,107,107,0.4);
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 60px 30px;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .about-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(102,126,234,0.4);
+        }
+
+        .about-card b {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+
+        .about-card p {
+            font-size: 15px;
+        }
+
+        /* Portfolio Section */
+        .portfolio-section {
+            padding: 60px 30px;
+            background-color: #f5f5f5;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .portfolio-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            background-color: #e0e0e0;
+        }
+
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .portfolio-card:hover .portfolio-image img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-content {
+            padding: 25px;
+        }
+
+        .portfolio-title {
+            color: #667eea;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .portfolio-description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .about-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 40px 30px;
+            }
+
+            .hero-text h1 {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                padding: 15px 20px;
+            }
+
+            .header nav {
+                gap: 15px;
+                justify-content: center;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 28px;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+
+            .about-section,
+            .portfolio-section,
+            .hero {
+                padding: 40px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header .logo {
+                font-size: 20px;
+            }
+
+            .header nav {
+                gap: 10px;
+                font-size: 14px;
+            }
+
+            .hero-text h1 {
+                font-size: 24px;
+            }
+
+            .hero-text p {
+                font-size: 16px;
+            }
+
+            .section-title h2 {
+                font-size: 24px;
+            }
+
+            .about-card,
+            .portfolio-content {
+                padding: 20px;
+            }
+
+            .portfolio-image {
+                height: 200px;
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">Hendra Profile</div>
+        <nav>
+            <a href="#header">Header</a>
+            <a href="#about">Biodata</a>
+            <a href="#portfolio">Portofolio</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero" id="header">
+        <div class="hero-text">
+            <h1>Selamat Datang di Website Saya</h1>
+            <p>Halo, saya Hendra. Saya adalah lulusan Sistem Informasi yang berdedikasi untuk mengembangkan solusi teknologi terbaik.</p>
+            <button class="hero-button">Pelajari Lebih Lanjut</button>
+        </div>
+        <div class="hero-image">
+            <img src="../sesi-1/premium_photo-1689568126014-06fea9d5d341.avif" alt="Hendra Profile Photo">
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-section" id="about">
+        <div class="section-title">
+            <h2>Tentang Saya</h2>
+            <p>Informasi Singkat Mengenai Saya</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-card">
+                <b>Nama Lengkap</b>
+                <p>Hendra</p>
+            </div>
+            <div class="about-card">
+                <b>Pendidikan</b>
+                <p>S1 Sistem Informasi</p>
+            </div>
+            <div class="about-card">
+                <b>Pekerjaan</b>
+                <p>Staff</p>
+            </div>
+            <div class="about-card">
+                <b>Kontak</b>
+                <p>082233345678</p>
+            </div>
+            <div class="about-card">
+                <b>Hobi</b>
+                <p>Musik dan Olahraga</p>
+            </div>
+            <div class="about-card">
+                <b>Alamat</b>
+                <p>Duren Sawit, Jakarta Timur</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <div class="portfolio-section" id="portfolio">
+        <div class="section-title">
+            <h2>Portofolio</h2>
+            <p>Kumpulan Proyek dan Karya Saya</p>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <img src="../sesi-1/foto profil.jfif" alt="Portfolio 1">
+                </div>
+                <div class="portfolio-content">
+                    <div class="portfolio-title">Website Profil</div>
+                    <div class="portfolio-description">Proyek pembuatan website profil pribadi menggunakan HTML dan CSS. Website ini menampilkan informasi biodata, pengalaman kerja, dan portfolio karya.</div>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <img src="../sesi-1/premium_photo-1689568126014-06fea9d5d341.avif" alt="Portfolio 2">
+                </div>
+                <div class="portfolio-content">
+                    <div class="portfolio-title">Sistem Informasi</div>
+                    <div class="portfolio-description">Proyek pengembangan sistem informasi untuk manajemen data perusahaan dengan database dan interface yang user-friendly.</div>
+                </div>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <img src="../sesi-1/premium_photo-1689568126014-06fea9d5d341.avif" alt="Portfolio 3">
+                </div>
+                <div class="portfolio-content">
+                    <div class="portfolio-title">Mobile App</div>
+                    <div class="portfolio-description">Proyek pengembangan aplikasi mobile dengan teknologi terkini untuk meningkatkan produktivitas dan kemudahan akses informasi.</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+</html>
